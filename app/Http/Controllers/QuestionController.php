@@ -19,7 +19,7 @@ class QuestionController extends Controller
      */
     public function index()
     {
-        return QuestionResource::collection(Question::latest()->get()); //getting questions from postman
+        return QuestionResource::collection(Question::latest()->get()); 
     }
 
     /**
@@ -43,6 +43,7 @@ class QuestionController extends Controller
      */
     public function show(Question $question)
     {
+        //return $question;
         return new QuestionResource($question);
     }
 
@@ -56,6 +57,7 @@ class QuestionController extends Controller
     public function update(Request $request, Question $question)
     {
         $question->update($request->all());
+        
         return response('Update', Response::HTTP_ACCEPTED);
 
     }
@@ -69,6 +71,6 @@ class QuestionController extends Controller
     public function destroy(Question $question)
     {
         $question->delete();
-        return response(null, Response::HTTP_NO_CONTENT);
+        return response('null', Response::HTTP_NO_CONTENT);
     }
 }

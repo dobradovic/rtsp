@@ -17,7 +17,8 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Application Environment
+    | Application Enviro PDOException::("SQLSTATE[HY000] [1045] Access denied for user 'forge'@'localhost' (using password: NO)")
+nment
     |--------------------------------------------------------------------------
     |
     | This value determines the "environment" your application is currently
